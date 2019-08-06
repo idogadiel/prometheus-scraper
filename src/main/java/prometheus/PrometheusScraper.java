@@ -189,7 +189,7 @@ public class PrometheusScraper {
      */
     protected OpenConnectionDetails openConnection(URL endpointUrl) throws IOException {
         URLConnection conn = endpointUrl.openConnection();
-        conn.setRequestProperty("Accept", getBinaryFormatContentType());
+        //conn.setRequestProperty("Accept", getBinaryFormatContentType());
         InputStream stream = conn.getInputStream();
         String contentType = conn.getContentType();
         return new OpenConnectionDetails(stream, contentType);
